@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <br>
+        <h2>Led Controller</h2>
+        <h5>Control ArduinoUNO Board from host computer</h5>
+        <h6>1)NodeJS</h6>
+        <h6>2)Arduino Firmata</h6>
+        <h6>2)Arduino Firmata</h6>
+        <h6>4)Johnny-Five nodejs Library</h6>
+        <br>
+        <button type="button" class="btn btn-outline-primary btn-on">Led On</button>
+        <button type="button" class="btn btn-outline-secondary btn-off">Led Off</button>
+        <button type="button" class="btn btn-outline-success btn-blink">Led Blink</button>
+        <button type="button" class="btn btn-outline-info btn-stop">Led Stop</button>
+        <br>
+        <br>
+        <br>
+
+        <div class="alert alert-success">
+            <strong>Message : </strong><span class="response"></span>
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $(".btn-on").on('click', function () {
+
+                $.get('/on', function (response) {
+                    console.log(response)
+                    $(".response").text(response.message)
+                })
+
+            })
+
+            $(".btn-off").on('click', function () {
+
+                $.get('/off', function (response) {
+                    console.log(response)
+                    $(".response").text(response.message)
+                })
+
+            })
+
+
+            $(".btn-blink").on('click', function () {
+
+                $.get('/blink', function (response) {
+                    console.log(response)
+                    $(".response").text(response.message)
+                })
+
+            })
+
+
+            $(".btn-stop").on('click', function () {
+
+                $.get('/stop', function (response) {
+                    console.log(response)
+                    $(".response").text(response.message)
+                })
+
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>
