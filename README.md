@@ -6,6 +6,8 @@ Control Led with arduino board using NodeJS
 <p align="center">
   <img src="screenshots/img3.jpg" width="100%" alt="Full demo picture">
 </p>
+
+#Video
 <p align="center">
-  [![Audi R8](http://img.youtube.com/vi/KOxbO0EI4MA/0.jpg)](https://github.com/saikatdutta1991/nodeledcontrol/blob/master/screenshots/vid1.mp4?raw=true "Audi R8")
+  [![Alt text](https://github.com/saikatdutta1991/nodeledcontrol/blob/master/screenshots/img1.jpg?raw=true)](https://www.youtube.com/watch?v=S4VfqFDCt0I)
 </p>
